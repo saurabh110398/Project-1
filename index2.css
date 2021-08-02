@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+
+*{
+/* box-sizing: border-box; */
+margin: 0;
+padding: 0;
+}
+/* a{
+ text-decoration: none;
+
+} */
+.parallax {
+  /* The image used */
+  background-image: url("https://i.gifer.com/1sNG.gif");
+
+  /* Set a specific height */
+  min-height: 900px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+body{
+/* background: url('bg.jpg') no-repeat center center fixed ; */
+background-size: cover;
+background-repeat: repeat;
+/* background-color: #f0f2f5; */
+/* animation: 10000ms ease-in-out infinite color-change; */
+
+}
+/* @keyframes color-change {
+ 0% {
+   background-color: teal;
+ }
+ 20% {
+   background-color: gold;
+ }
+ 40% {
+   background-color: indianred;
+ }
+ 60% {
+   background-color: violet;
+ }
+ 80% {
+   background-color: green;
+ }
+ 100% {
+   background-color: teal;
+ }
+} */
+
+
+.container{
+/* border: 2px solid purple; */
+background-color: none;
+/* background-image: url("https://64.media.tumblr.com/e1c1b772e41c76052c00a66692747bc3/tumblr_nwfxf33OE01ugas5oo1_500.gifv"); */
+/* border-radius: 15px; */
+width: 500px;
+max-width: 100%;
+height: 1100px;
+max-height: 100%;
+position: absolute;
+
+
+top: 10%;
+left: 35%;
+
+
+
+}
+ /* span{
+
+display: block;
+color: white;
+text-align:center;
+font-size:40px;
+border-bottom:3px solid purple;
+margin-bottom: 15px;
+padding: 13px 0px;
+background-color: black;
+} */
+
+#box{
+width: 100%;
+margin: 15px 0px;
+border:  2px solid purple;
+border-radius: 5px;
+
+}
+
+.box input{
+width: 75%;
+font-size: 20px;
+/* margin: 12px 0px ; */
+padding: 15px 10px;;
+/* border: 2px solid purple; */
+outline: none;
+color: black;
+background-color:  grey;
+
+}
+.box i{
+color:purple;
+text-align: center;
+padding: 3px;
+
+}
+#check{
+  color: white;
+}
+
+#btn{
+cursor: pointer;
+outline: none;
+background: none;
+color: black;
+border-radius: 15px;
+width: 100%;
+padding: 10px;
+margin-top: 10px;
+/* margin-left: 1px */
+border: 2px solid purple;
+
+}
+#btn:hover{
+color: purple;
+background: white;
+}
+
+#btn1{
+cursor: pointer;
+outline: none;
+background: none;
+color: black;
+border-radius: 15px;
+width: 100%;
+padding: 5px;
+/* margin-bottom: 15px ; */
+
+/* margin-left: 1px */
+border: 2px solid green;
+
+}
+#btn1:hover{
+color: purple;
+background: white;
+}

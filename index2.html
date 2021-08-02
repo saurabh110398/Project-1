@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index2.css">
+    <!-- <script src="index.js" charset="utf-8"></script> -->
+    <link rel = "icon" href =
+    "https://watotochurch.com/giving/assets/img/faces/login1.jpg"
+        type = "image/x-icon">
+    <title>Sign Up</title>
+  </head>
+
+  <body>
+
+
+
+    <div class=" parallax">
+
+    </div>
+    <form class="container1"  method="post" onsubmit ="return verifyPassword()">
+      <div class="container">
+        <!-- <span>👋 Sign Up</span> -->
+
+
+        <div id="box" class="form-floating mb-3">
+          <input type="text" class="form-control" id="myname" onchange="newform()" placeholder="" required>
+          <label for="myname">Full name</label>
+        </div>
+
+        <div id="box" class="form-floating mb-3">
+          <input type="email" class="form-control" id="myemail" onchange="newform()" placeholder="" required>
+          <label for="myemail">Email address</label>
+        </div>
+
+        <div id="box" class="form-floating mb-3">
+          <input type="password" class="form-control oldPassword" id="mypassword" onkeyup="validate()" onchange="newform()" placeholder="" required>
+          <label for="mypassword">Password</label>
+        </div>
+
+        <div id="box" class="form-floating mb-3">
+          <input type="password" class="form-control newPassword " id="myc_password" onkeyup="validate()" onchange="newform()" placeholder="" required>
+          <label for="myc_password">Confirm password</label>
+          <span id = "message" style="color:red"> </span>
+          <!-- <p style="margin-left: 20%;"  class="message1 pt-4 text-danger"></p> -->
+        </div>
+
+        <div id="box" class="form-floating mb-3">
+          <input type="tel" class="form-control" id="mymobile" onchange="newform()" placeholder=""  required>
+          <label for="mymobile">Mobile number</label>
+        </div>
+
+        <div id="box" class="form-floating mb-3">
+          <input type="date" class="form-control" id="mydate"  onchange="newform()" placeholder="" required>
+          <label for="mymobile">Date of Birth</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" onchange="newform()" id="conditions" required>
+					<label class="form-check-label" id="check" for="conditions-input"> Accept all terms and conditions</label>
+        </div>
+
+        <div class="progress">
+          <div id="progress-bar-new" class="progress-bar progress-bar-striped animated"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width:0%">
+          </div>
+        </div>
+          <br>
+        <div style="text-align: center">
+
+          <button type="submit" id="submit-button" class="btn btn-outline-success" onclick="login()"  type="submit" name="button" disabled>Submit</button>
+          <button type="reset"  class="btn btn-outline-warning" type="reset" name="button">Reset</button>
+          <p class="message pt-4 text-default" style="color: white;" >Already have an account?
+            <a href="file:///C:/Users/SAURABH%20SINGH/Desktop/HTML5/PROJECTS/Minor%20Project/index.html">Log In</a>
+          </p>
+        </div>
+
+
+      </div>
+
+    </form>
+    <script type="text/javascript">
+
+      let name1 = document.getElementById('myname');
+      let email1 = document.getElementById('myemail');
+      let server1 = document.getElementById('mypassword');
+      let img1 = document.getElementById('myc_password');
+      let list1 = document.getElementById('mymobile');
+      let tnc1 = document.getElementById('conditions');
+      let tnc2 = document.getElementById('mydate');
+      let prg1 = document.getElementById('progress-bar-new');
+
+
+      function newform() {
+          let progress = 0;
+          let x = 0;
+
+          if (name1.value){
+              progress += 100/7;
+              x++;
+          }
+          if (email1.value){
+              progress += 100/7;
+              x++;
+          }
+          if (server1.value){
+              progress += 100/7;
+              x++;
+          }
+          if (img1.value){
+              progress += 100/7;
+              x++;
+          }
+          if (list1.value){
+              progress += 100/7;
+              x++;
+          }
+          if (tnc1.checked){
+              progress += 100/7;
+              x++;
+          }
+          if (tnc2.value){
+              progress += 100/7;
+              x++;
+          }
+          console.log(progress + "%");
+          prg1.style.width = progress + "%";
+
+          if(x == 7){
+              document.getElementById('submit-button').disabled = false;
+
+          }
+          else{
+              document.getElementById('submit-button').disabled = true;
+
+          }
+      }
+      function verifyPassword() {
+          var pw = document.getElementById("mypassword").value;
+          var pw1 = document.getElementById("myc_password").value;
+          //check empty password field
+          if(pw == "" ) {
+             document.getElementById("message").innerHTML = "**Fill the password please!";
+             return false;
+          }
+
+         //minimum password length validation
+          if(pw.length < 8) {
+             document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+             return false;
+          }
+
+        //maximum length of password validation
+          if(pw.length > 15) {
+             document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+             return false;
+          }
+          if(pw == pw1){
+            function login() {
+              alert("Data saved successfully");
+            }
+            // alert("Password is matched");
+
+          }
+          else {
+             alert("Those passwords didn’t match. Try again");
+          }
+        }
+
+
+    </script>
+
+
+  </body>
+</html>
